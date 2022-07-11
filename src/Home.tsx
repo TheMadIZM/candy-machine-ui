@@ -423,14 +423,14 @@ const Home = (props: HomeProps) => {
         } else {
           setAlertState({
             open: true,
-            message: 'Mint failed! Please try again!',
+            message: 'Sorry! Mint failed! Please try again!',
             severity: 'error',
           });
           refreshCandyMachineState();
         }
       }
     } catch (error: any) {
-      let message = error.msg || 'Minting failed! Please try again!';
+      let message = error.msg || 'Sorry! Minting failed! Please try again!';
       if (!error.msg) {
         if (!error.message) {
           message = 'Transaction timeout! Please try again.';
