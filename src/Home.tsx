@@ -560,7 +560,7 @@ const Home = (props: HomeProps) => {
                         ? `${formatNumber.asNumber(discountPrice)}`
                         : `${formatNumber.asNumber(
                             candyMachine.state.price,
-                          )} 🗿`}
+                          )} ILWL`}
                     </Typography>
                   </Grid>
                   <Grid item xs={5}>
@@ -594,7 +594,7 @@ const Home = (props: HomeProps) => {
                               ? 'COMPLETE🗿'
                               : isPresale
                               ? 'PRESALE'
-                              : 'LIVE!'
+                              : 'LIVE 🗿'
                           }
                           onComplete={() => toggleMintButton(currentShift)}
                         />
