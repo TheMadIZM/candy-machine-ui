@@ -406,7 +406,7 @@ const Home = (props: HomeProps) => {
           setSetupTxn(undefined);
           setAlertState({
             open: true,
-            message: 'Congratulations, Izm! Mint succeeded! You are now a holder of an Izm Labs DAO Pass!',
+            message: 'Congratulations! Mint succeeded!',
             severity: 'success',
             hideDuration: 7000,
           });
@@ -415,7 +415,7 @@ const Home = (props: HomeProps) => {
           setAlertState({
             open: true,
             message:
-              'Sorry, mint likely failed! Anti-bot SOL 0.01 fee potentially charged! Check the explorer to confirm the mint failed and if so, make sure you are eligible to mint before trying again.',
+              'Mint likely failed! Anti-bot SOL 0.01 fee potentially charged! Check the explorer to confirm the mint failed and if so, make sure you are eligible to mint before trying again.',
             severity: 'error',
             hideDuration: 8000,
           });
@@ -423,14 +423,14 @@ const Home = (props: HomeProps) => {
         } else {
           setAlertState({
             open: true,
-            message: 'Sorry! Mint failed! Please try again!',
+            message: 'Mint failed! Please try again!',
             severity: 'error',
           });
           refreshCandyMachineState();
         }
       }
     } catch (error: any) {
-      let message = error.msg || 'Sorry! Minting failed! Please try again!';
+      let message = error.msg || 'Minting failed! Please try again!';
       if (!error.msg) {
         if (!error.message) {
           message = 'Transaction timeout! Please try again.';
@@ -579,7 +579,7 @@ const Home = (props: HomeProps) => {
                           display="block"
                           style={{ fontWeight: 'bold' }}
                         >
-                          UNTIL END OF MINT
+                          TO END OF MINT
                         </Typography>
                       </>
                     ) : (
@@ -593,8 +593,8 @@ const Home = (props: HomeProps) => {
                             (endDate && Date.now() > endDate.getTime())
                               ? 'COMPLETE🗿'
                               : isPresale
-                              ? 'PRESALE 🗿'
-                              : 'LIVE 🗿'
+                              ? 'PRESALE'
+                              : 'LIVE'
                           }
                           onComplete={() => toggleMintButton(currentShift)}
                         />
