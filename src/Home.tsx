@@ -594,7 +594,7 @@ const Home = (props: HomeProps) => {
                               ? 'COMPLETE🗿'
                               : isPresale
                               ? 'PRESALE'
-                              : 'LIVE'
+                              : 'LIVE!'
                           }
                           onComplete={() => toggleMintButton(currentShift)}
                         />
