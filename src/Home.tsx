@@ -406,7 +406,7 @@ const Home = (props: HomeProps) => {
           setSetupTxn(undefined);
           setAlertState({
             open: true,
-            message: 'Congratulations! Mint succeeded!',
+            message: 'Congratulations! Mint succeeded! You are now a holder of an Izm Labs DAO Pass! #WAGBIZM!',
             severity: 'success',
             hideDuration: 7000,
           });
